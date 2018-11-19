@@ -74,11 +74,11 @@ public class Pong
    private static final int OUTER_RECTANGLE_WIDTH_CONSTANT = 750;
    private static final int OUTER_RECTANGLE_HEIGHT_CONSTANT = 450;
    
-   private static final String START = "Start";
-   private static final String PAUSE = "Pause";
-   private static final String EASY = "Easy";
-   private static final String MEDIUM = "Medium";
-   private static final String HARD = "Hard";
+   private static final String START = "Pradeti";
+   private static final String PAUSE = "Pristabdyti";
+   private static final String EASY = "Lengvas";
+   private static final String MEDIUM = "Vidutinis";
+   private static final String HARD = "Sunkus";
    
    private int paddleVerticalTranslationFactor;
    private Timer timer;
@@ -126,7 +126,7 @@ public class Pong
              scene.repaint();
              if(movingCircle.getLivesLeft() == 0)
              {
-                outerRectangle.setBodyColor(Color.RED);
+                outerRectangle.setBodyColor(Color.WHITE);
              }
           }
       };
@@ -168,7 +168,7 @@ public class Pong
          public void keyPressed(KeyEvent e)
          {
             int keyCode = e.getKeyCode();
-            if (keyCode == KeyEvent.VK_NUMPAD8)
+            if (keyCode == KeyEvent.VK_UP)
             {
                if(paddle.getYPosition() <= DISPLAY_TOP_EDGE_CONSTANT)
                {
@@ -193,7 +193,7 @@ public class Pong
                }           
 
             }
-            else if (keyCode == KeyEvent.VK_NUMPAD2)
+            else if (keyCode == KeyEvent.VK_DOWN)
             {
                if(paddle.getYPosition() >= DISPLAY_TOP_SIDE_CONSTANT)
                {
@@ -256,7 +256,7 @@ public class Pong
                         movingCircle.getLivesLeft());
                   movingCircle.setGameStatus(false);
                   rightEdge.setBodyColor(Color.red);
-                  outerRectangle.setBodyColor(Color.blue);
+                  outerRectangle.setBodyColor(Color.yellow);
                   threadStarted = false;
                   paddle.setXPosition(PADDLE_X_POSITION_CONSTANT);
                   paddle.setYPosition(PADDLE_Y_POSITION_CONSTANT);
@@ -328,10 +328,10 @@ public class Pong
       difficultyPanel.add(difficultyLabel);
       difficultyPanel.add(gameDifficultyList);
       
-      outerRectangle.setBodyColor(Color.blue);
-      innerRectangle.setBodyColor(Color.black);
+      outerRectangle.setBodyColor(Color.red);
+      innerRectangle.setBodyColor(Color.white);
       scene.setGameDisplay(innerRectangle);
-      rightEdge.setBodyColor(Color.red);
+      rightEdge.setBodyColor(Color.black);
       movingCircle.setRightEdge(rightEdge);
       paddle.setBodyColor(Color.blue);
       
