@@ -8,6 +8,10 @@ import java.io.IOException;
 public class MasyvoVidurkis {
 
 	public static void main(String[] args) throws IOException {
+		MasyvoVidurkis();
+	}
+	
+	public static void MasyvoVidurkis() throws IOException {
 		String filePath = "C:\\Users\\PC\\Desktop\\java\\java1\\Testas1\\res\\txt\\array.txt";
 		File file = new File(filePath);
 		BufferedReader br = new BufferedReader(new FileReader(file));

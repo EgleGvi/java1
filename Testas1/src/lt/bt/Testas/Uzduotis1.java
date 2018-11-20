@@ -10,6 +10,8 @@ public class Uzduotis1 {
          //AreaRectangle();
          //AreaCircle();
          QuadraticEquation();
+         int suma = sudetis(5, 6);
+ 
     }
 	
 	public static void AreaTriangle() {
@@ -64,5 +66,11 @@ public class Uzduotis1 {
 		}
 		
 		System.out.println("Atsakymas: "+x);
+	}
+	
+	
+	private static int sudetis(int a, int b) {
+		int sum = a + b;
+		return sum;
 	}
 }
