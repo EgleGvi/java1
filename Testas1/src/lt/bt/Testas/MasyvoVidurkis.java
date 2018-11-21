@@ -12,6 +12,8 @@ public class MasyvoVidurkis {
 	}
 	
 	public static void MasyvoVidurkis() throws IOException {
+		int[] positive = new int [4];
+		int[] negative = new int [1];
 		String filePath = "C:\\Users\\PC\\Desktop\\java\\java1\\Testas1\\res\\txt\\array.txt";
 		File file = new File(filePath);
 		BufferedReader br = new BufferedReader(new FileReader(file));
@@ -40,6 +42,26 @@ public class MasyvoVidurkis {
 				System.out.println(newArray[j]);
 				j++;
 			}
+		}
+		int positiveIndex = 0;
+		int negativeIndex = 0;
+		for (i=0; i < array.length; i++) {
+			if(array[i] >= 0) {
+				positive[positiveIndex] = array[i];
+				positiveIndex++;
+			}
+			else {
+				negative[negativeIndex] = array[i];
+				negativeIndex++;
+			}
+		}
+		System.out.println("Teigiami: ");
+		for (i=0; i < positive.length; i++) {
+			System.out.println(positive[i]);
+		}
+		System.out.println("Neigiami: ");
+		for (i=0; i < negative.length; i++) {
+			System.out.println(negative[i]);
 		}
 	}
 }

@@ -65,7 +65,7 @@ public class Uzduotis1 {
 			return;
 		}
 		
-		System.out.println("Atsakymas: "+x);
+		System.out.println("Atsakymas: "+ x);
 	}
 	
 	
