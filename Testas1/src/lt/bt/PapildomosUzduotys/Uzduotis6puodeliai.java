@@ -12,7 +12,13 @@ public class Uzduotis6puodeliai {
 		// TODO Auto-generated method stub
 		//cups();
 		//cookies();
-		parachute();
+		//parachute();
+		//frog();
+		//math();
+		//buns();
+		//jonukas();
+		konkursas();
+		
 	}
 	
 	
@@ -58,4 +64,117 @@ public class Uzduotis6puodeliai {
 			System.out.println("Parasiutas neissiskleis");
 		}
 	}
+	
+	public static void frog() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Kiek sveria varle?");
+		double weight = scanner.nextDouble();
+		System.out.println("Kiek varliu norima stebeti?");
+		double number = scanner.nextDouble();
+		double sum = weight * number;
+		System.out.println(sum);
+		if(sum > 5000){
+			System.out.println("Varliu stebejimui pakanka");
+		}
+		else {
+			System.out.println("Varliu stebejimui per mazai");
+		}
+	}
+	
+	public static void math() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite pazymi");
+		double grade1 = scanner.nextDouble();
+		double grade2 = scanner.nextDouble();
+		double grade3 = scanner.nextDouble();
+		double grade4 = scanner.nextDouble();
+		double grade5 = scanner.nextDouble();
+		double gradeNumber = 5;
+		double average = (grade1 + grade2 + grade3 + grade4 + grade5) / gradeNumber;
+		System.out.println(average);
+		if (average > 9) {
+			System.out.println("Petriukas gaus tris saldainius");
+		}
+		else if (average >= 7 || average <= 9) {
+			System.out.println("Petriukas gaus du saldainius");
+		}
+		else {
+			System.out.println("Petriukas gaus viena saldaini");
+		}
+	}
+	
+	public static void buns() {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite kainas a ir b:");
+		double a = scanner.nextDouble();
+		double b = scanner.nextDouble();
+		System.out.println("Iveskite kiekius n1, n2, n3:");
+		int n1 = scanner.nextInt();
+		int n2 = scanner.nextInt();
+		int n3 = scanner.nextInt();
+		System.out.println("Iveskite bandeles kaina:");
+		double k = scanner.nextDouble();
+		double sum = 0;
+		if(k <= a ) {
+			sum=k * n1;		
+		}
+		else if(k > a &&  k < b) {
+			sum = k * n2;
+		}
+		else if(k >= b) {
+			sum= k * n3;
+		}
+		
+		 sum = sum * 100;
+		 sum = Math.round(sum);
+		 sum = sum / 100; 
+		 System.out.println("Uz bandeles bus sumoketa " + sum + " Lt");
+	}
+	
+	public static void jonukas() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite uzduoties varianta:");
+		double num = scanner.nextDouble();
+		if(num == 1 || num == 2 || num == 3) {
+			System.out.println("Iveskite a reiksme");
+			double a = scanner.nextDouble();
+			System.out.println("Iveskite b reiksme");
+			double b = scanner.nextDouble();
+			double x = 0;
+			if(num == 1) {
+				x = (a * b) + 3;
+			}
+			else if(num == 2) {
+				x = a + b;
+			}
+			else if(num == 3) {
+				x = a - b;
+			}
+			System.out.println("Atsakymas x = " + x);
+		}
+		else {
+			System.out.println("Tokio pasirinkimo nera");
+		}
+		
+	}
+	
+	private static void konkursas() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite intervalo pradzia:");
+		int a = scanner.nextInt();
+		System.out.println("Iveskite intervalo pabaiga:");
+		int b = scanner.nextInt();
+		int sum = 0;
+		for(int i = a; i <= b; i++) {
+			if(i % 6 == 0) {
+				System.out.println(i);
+				sum++;
+			}
+		}
+		
+		System.out.println("Reikalingu marskineliu skaicius: " + sum );
+	}
+	
+	
 }

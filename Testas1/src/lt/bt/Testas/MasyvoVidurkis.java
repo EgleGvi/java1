@@ -64,4 +64,8 @@ public class MasyvoVidurkis {
 			System.out.println(negative[i]);
 		}
 	}
+	
+	public static int[] sortAscending(int[] messyArray) {
+		
+	}
 }
