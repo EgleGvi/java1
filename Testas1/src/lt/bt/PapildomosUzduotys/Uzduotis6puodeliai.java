@@ -8,7 +8,7 @@ public class Uzduotis6puodeliai {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		//cups();
 		//cookies();
@@ -17,7 +17,12 @@ public class Uzduotis6puodeliai {
 		//math();
 		//buns();
 		//jonukas();
-		konkursas();
+		//konkursas();
+		//skaiciai();
+		//snaiges();
+		//eglutes();
+		//kauliukai();
+		pirkiniai();
 		
 	}
 	
@@ -176,5 +181,86 @@ public class Uzduotis6puodeliai {
 		System.out.println("Reikalingu marskineliu skaicius: " + sum );
 	}
 	
+	private static void skaiciai() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite a reiksme:");
+		int a = scanner.nextInt();
+		System.out.println("Iveskite b reiksme:");
+		int b = scanner.nextInt();
+		System.out.println("Iveskite c reiksme:");
+		int c = scanner.nextInt();
+		if (a % 3 == 0 ) {
+			System.out.println(a);
+		}
+		else if (b % 3 == 0) {
+			System.out.println(b);
+		}
+		else if (c % 3 == 0) {
+			System.out.println(c);
+		}
+		else {
+			System.out.println("nera");
+		}
+	}
 	
+	private static void snaiges() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite kiek snaigiu nukrito per pirmaja sekunde:");
+		int snow = scanner.nextInt();
+		System.out.println("Iveskite kiek sekundziu snigo:");
+		int sec = scanner.nextInt();
+		
+	}
+	
+	private static void eglutes() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Kiek egluciu atvezta?");
+		int tree = scanner.nextInt();
+		int[] array = new int [tree];
+		double sum = 0;
+		for(int i = 0; i < array.length; i++) {
+			int number = i+1;
+			System.out.println("Iveskite " + number + "-os eglutes auksti :");
+			double height = scanner.nextDouble();
+			sum = sum + height;	
+		}
+		double average = sum / tree;
+		System.out.println(average);
+	}
+	
+	public static void kauliukai() throws Exception {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Iveskite kauliuku kieki:");
+		int dice = scanner.nextInt();
+		int[] array = new int [dice];
+		double surinktiTaskai =0;
+		for(int i = 0; i < array.length; i++) {
+			int number = i + 1;
+			System.out.println( number + "-ojo kauliuko tasku kiekis:");
+			int points =scanner.nextInt();
+			if (points > 6 || points <= 0) {
+				throw new Exception ("Kauliukas negali tureti tokio skaiciaus");
+			}	
+			surinktiTaskai = surinktiTaskai + points; 
+		}
+		int sum = 6 * dice;
+		double aver = (double)surinktiTaskai / dice;
+		System.out.println("Is viso buvo galima surinkti tasku: " + sum);
+		System.out.println("Is viso surinkta tasku: " + surinktiTaskai);
+		System.out.println("Tasku vidurkis: " + aver);
+		if(surinktiTaskai > (sum/2)) {
+			System.out.println("Loterija laimeta");
+		}
+		else {
+			System.out.println("Loterija pralaimeta");
+		}
+	}
+	
+	public static void pirkiniai() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Kiek buvo pirkiniu?");
+		int products = scanner.nextInt();
+		
+	}
 }
+
