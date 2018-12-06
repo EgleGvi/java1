@@ -22,7 +22,7 @@ public class Uzduotis6puodeliai {
 		//snaiges();
 		//eglutes();
 		//kauliukai();
-		pirkiniai();
+		//pirkiniai();
 		
 	}
 	
@@ -203,13 +203,22 @@ public class Uzduotis6puodeliai {
 		}
 	}
 	
+	//1 sec 5
+	//2 sec 5*2+5=15
+	//3 sec 15*2+5=35
+	
+	
 	private static void snaiges() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Iveskite kiek snaigiu nukrito per pirmaja sekunde:");
+		System.out.println("Iveskite kiek snaigiu nukrito per pirmaja sekunde ir kiek sekundziu snigo?");
 		int snow = scanner.nextInt();
-		System.out.println("Iveskite kiek sekundziu snigo:");
 		int sec = scanner.nextInt();
+		int viso;
+		for(int i = 1; i < sec; i++) {
 		
+		}
+		
+		System.out.println();
 	}
 	
 	private static void eglutes() {
@@ -260,7 +269,28 @@ public class Uzduotis6puodeliai {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Kiek buvo pirkiniu?");
 		int products = scanner.nextInt();
-		
+		int aver = 0;
+		int weight=0;
+		for(int i = 0; i < products; i++) {
+			int number = i + 1;
+			System.out.println("Iveskite "+ number + " pirkinio kaina ir svori:");
+			int price =scanner.nextInt();
+			weight =scanner.nextInt();
+			aver = aver + price;
+			weight += weight;
+		}
+		int aver2 = aver / products;
+		if (weight < 5000) {
+			System.out.println("Petriukas gales parnesti pirkinius");
+		}
+		else {
+			System.out.println("Petriukas negales parnesti pirkiniu");
+		}
+		int fullNumber = aver2;
+		int litas = (int) Math.floor(fullNumber/100);
+		int pennies = fullNumber - litas * 100;
+		System.out.println("Pirkinio vidutine kaina: " + litas + " Lt " + pennies + " ct");
 	}
+	
 }
 

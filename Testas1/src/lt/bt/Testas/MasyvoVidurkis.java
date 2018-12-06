@@ -10,7 +10,7 @@ public class MasyvoVidurkis {
 	public static void main(String[] args) throws IOException {
 		MasyvoVidurkis();
 	}
-	
+
 	public static void MasyvoVidurkis() throws IOException {
 		int[] positive = new int [4];
 		int[] negative = new int [1];
@@ -55,6 +55,7 @@ public class MasyvoVidurkis {
 				negativeIndex++;
 			}
 		}
+		positive = sortArray(positive);
 		System.out.println("Teigiami: ");
 		for (i=0; i < positive.length; i++) {
 			System.out.println(positive[i]);
@@ -62,10 +63,19 @@ public class MasyvoVidurkis {
 		System.out.println("Neigiami: ");
 		for (i=0; i < negative.length; i++) {
 			System.out.println(negative[i]);
-		}
+		}	
 	}
 	
-	public static int[] sortAscending(int[] messyArray) {
-		
+	public static int[] sortArray( int[] array) {
+		for (int j = 0; j < array.length; j++) {
+			for(int i = 0; i < array.length-1; i++) {
+				if (array[i] > array[i+1]) {
+					int laikinas = array[i];
+					array[i] = array[i+1];
+					array[i+1] = laikinas;
+				}
+			}
+		}
+		return array;
 	}
 }

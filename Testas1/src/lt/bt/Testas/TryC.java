@@ -1,5 +1,7 @@
 package lt.bt.Testas;
 
+import java.io.File;
+
 public class TryC {
 
 	public TryC() {
@@ -24,7 +26,8 @@ public class TryC {
         }
         else {
             System.out.println("Failo nera");
-        }
-	    
+        }  
 	}
+	
+	
 }
